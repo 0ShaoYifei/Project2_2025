@@ -1,21 +1,24 @@
 import RPi.GPIO as GPIO
 import time
 
-channel = 4
+# GPIO configuration for moisture sensor
+channel = 4  # Using GPIO4 (BCM numbering)
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(channel, GPIO.IN)
+GPIO.setup(channel, GPIO.IN)  # Set as input pin
 
 print("Soil Moisture Sensor Test (Polling Mode)")
 print("Press Ctrl+C to exit")
 
 try:
     while True:
+        # Read sensor state (HIGH = Dry, LOW = Wet)
         if GPIO.input(channel):
             print("Dry")
         else:
             print("Wet")
-        time.sleep(1)
+        
+        time.sleep(1)  # Check every second
 except KeyboardInterrupt:
     print("\nTest Stopped")
 finally:
-    GPIO.cleanup()
+    GPIO.cleanup()  # Reset GPIO configuration
