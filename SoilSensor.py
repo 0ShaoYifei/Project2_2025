@@ -1,3 +1,9 @@
+# Program: Plant Moisture Sensor with Email Notification
+# Author: Yifei Shao
+# Student Number: W20109989
+# Date: 23/6/2025
+# Description: perform the sensor test
+
 import RPi.GPIO as GPIO
 import time
 
