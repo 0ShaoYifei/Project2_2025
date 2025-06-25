@@ -1,3 +1,9 @@
+# Program: Plant Moisture Sensor with Email Notification
+# Author: Yifei Shao
+# Student Number: W20109989
+# Date: 23/6/2025
+# Description: perform the test of sending email using SMTP
+
 import smtplib
 from email.message import EmailMessage
 
@@ -36,3 +42,4 @@ print('Email sent')
 
 # Disconnect from the SMTP server
 server.quit()
+
